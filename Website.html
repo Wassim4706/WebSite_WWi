@@ -33,32 +33,17 @@
             border: 1px solid #ddd;
             border-radius: 45px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 1em;
+            margin: -0.5em;
             padding: 1em;
             width: 300px;
+            height: 540px;
         }
 
         .product img {
             max-width: 100%;
             height: auto;
             border-radius: 10%;
-        }
-
-        .cart h2 {
-            margin-right: px;
-            margin-top: -640px;
-            color: black;
-            display: flex;
-        }
-
-        .cart ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .cart li {
-            margin-bottom: 0.5em;
-            color: black;
+            height: 350px;
         }
 
         footer {
@@ -79,7 +64,7 @@
             margin: 1em;
             width: 100px;
             height: 30px;
-            margin-left: 27px
+            margin-left: 100px
         }
         a {
             color: black;
@@ -95,7 +80,7 @@
     </section>
 
     <div class="cart">
-        <h2 align="left">Shopping Cart</h2>
+        <h2>Shopping Cart</h2>
         <ul id="cart-items" align="left">
         </ul>
     </div>
@@ -104,6 +89,7 @@
 
         const products = [
             { id: 1, name: 'New Hody', price: 3000, image: 'New Hody.jpg' },
+            { id: 1, name: 'Dragon Ball Hody', price: 3000, image: 'The Second Hody.jpg' },
         ];
 
         const cart = [];
@@ -119,9 +105,8 @@
                 productCard.innerHTML = `
                     <img src="${product.image}" alt="${product.name}">
                     <h2>${product.name}</h2>
-                    <p>A new hoodie from A&W. It contains the State of Palestine in the middle and the left sleeve contains the A&W logo.
+                    <p>A hody by A&W.</p>
                     <p>${product.price.toFixed(2)} DZ</p>
-                    <button onclick="addToCart(${product.id})">Add to Cart</button>
                     <button onclick="ContactUs(${product.id})"><a href="https://www.instagram.com/med_wassim_10/">Contact Us</a></button>
                 `;
 
