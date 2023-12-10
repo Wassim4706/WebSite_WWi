@@ -6,12 +6,11 @@
     <title>My Online Store</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #b3cdd1;
             background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 0%);
-
         }
 
         header {
@@ -26,7 +25,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 2em;
+            padding: 3em;
         }
 
         .product {
@@ -40,8 +39,26 @@
         }
 
         .product img {
-            max-width: 75%;
+            max-width: 100%;
             height: auto;
+            border-radius: 10%;
+        }
+
+        .cart h2 {
+            margin-right: px;
+            margin-top: -640px;
+            color: black;
+            display: flex;
+        }
+
+        .cart ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart li {
+            margin-bottom: 0.5em;
+            color: black;
         }
 
         footer {
@@ -53,7 +70,8 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            height: 50px;
+            height: 110px;
+            font-size: 25px;
         }
         button {
             border-radius: 7px;
@@ -61,36 +79,85 @@
             margin: 1em;
             width: 100px;
             height: 30px;
+            margin-left: 27px
+        }
+        a {
+            color: black;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Online Store</h1>
+        <h1>Welcome to The A&W Store</h1>
     </header>
 
-    <section>
-        <div class="product">
-            <img src="Algeria_Home_Kit.jpg" alt="Algeria_Home_Kit">
-            <h2>Algeria Home Kit</h2>
-            <p>This is the first shirt for the national team of algeria in 2022 </p>
-            <p>3000 DZ</p>
-            <button><a href="https://www.instagram.com/med_wassim_10/">Contact us</a></button>
-        </div>
-
-        <div class="product">
-            <img src="Fc Barcelona Home Kit.jpg" alt="Product 2">
-            <h2>Fc Barcelona Home Kit</h2>
-            <p>This is the first shirt for Fc Barcelona in 2023</p>
-            <p>3000 DZ</p>
-            <button><a href="https://www.instagram.com/med_wassim_10/">Contact us</a></button>
-        </div>
-
-        <!-- Add more product divs as needed -->
+    <section id="products">
     </section>
 
+    <div class="cart">
+        <h2 align="left">Shopping Cart</h2>
+        <ul id="cart-items" align="left">
+        </ul>
+    </div>
+
+    <script>
+
+        const products = [
+            { id: 1, name: 'New Hody', price: 3000, image: 'New Hody.jpg' },
+        ];
+
+        const cart = [];
+
+        function renderProducts() {
+            const productsContainer = document.getElementById('products');
+            productsContainer.innerHTML = '';
+
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product';
+
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>A new hoodie from A&W. It contains the State of Palestine in the middle and the left sleeve contains the A&W logo.
+                    <p>${product.price.toFixed(2)} DZ</p>
+                    <button onclick="addToCart(${product.id})">Add to Cart</button>
+                    <button onclick="ContactUs(${product.id})"><a href="https://www.instagram.com/med_wassim_10/">Contact Us</a></button>
+                `;
+
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        function renderCart() {
+            const cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = '';
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('li');
+                cartItem.textContent = `${item.name} - ${item.price.toFixed(2)} USD`;
+                cartContainer.appendChild(cartItem);
+            });
+        }
+        function addToCart(productId) {
+            const productToAdd = products.find(product => product.id === productId);
+
+            if (productToAdd) {
+                cart.push({
+                    id: productToAdd.id,
+                    name: productToAdd.name,
+                    price: productToAdd.price,
+                });
+
+                renderCart();
+            }
+        }
+        renderProducts();
+        renderCart();
+    </script>
+
     <footer>
-        <p>&copy; 2023 Makhlouf Mohammed Ouassim. All rights reserved.</p>
+        <p>&copy; 2023 A&W. All rights reserved.</p>
     </footer>
 </body>
 </html>
