@@ -10,27 +10,46 @@
             margin: 0;
             padding: 0;
             background-color: #b3cdd1;
-            background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 0%);
+            background-image: linear-gradient(315deg, rgb(206, 102, 102) 0%, #a2d2e0 0%);
         }
 
         header {
-            background-color: #7f5a83;
-            background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-            color: #fff;
+            background-color: #8da8e0;
+            background-image: linear-gradient(315deg, #5f3164 0%, rgb(212, 98, 98) 74%);
+            color: #d1f9ff;
             text-align: center;
             padding: 1em;
         }
 
-        section {
+        #products {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 3em;
         }
 
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
+        #informations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 3em;
+            margin-top: -50px;
+        }
+
+        .product1 {
+            background-color: rgb(212, 98, 98);
+            background-image: linear-gradient(315deg, #5f3164 0%, rgb(212, 98, 98) 74%);
+            border: 1px solid rgb(212, 98, 98);
+            border-radius: 45px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: -0.5em;
+            padding: 1em;
+            width: 300px;
+        }
+        .product2 {
+            background-color: hsl(0, 57%, 61%);
+            background-image: linear-gradient(315deg, #5f3164 0%, rgb(212, 98, 98) 74%);
+            border: 1px solid rgb(212, 98, 98);
             border-radius: 45px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin: -0.5em;
@@ -38,36 +57,138 @@
             width: 300px;
         }
 
-        .product img {
+        .product3 {
+            background-color: rgb(212, 98, 98);
+            background-image: linear-gradient(315deg, #5f3164 0%, rgb(212, 98, 98) 74%);
+            border: 1px solid rgb(212, 98, 98);
+            border-radius: 45px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: -0.5em;
+            padding: 1em;
+            width: 300px;
+        }
+        .product4 {
+            background-color: hsl(0, 57%, 61%);
+            background-image: linear-gradient(315deg, #5f3164 0%, rgb(212, 98, 98) 74%);
+            border: 1px solid rgb(212, 98, 98);
+            border-radius: 45px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: -0.5em;
+            padding: 1em;
+            width: 300px;
+        }
+        .product1 img {
             max-width: 100%;
-            height: auto;
-            border-radius: 10%;
-            height: 350px;
+            border-radius: 30px;
+            height: 100%;
+            object-fit: contain;
         }
 
-        footer {
-            background-color: #7f5a83;
-            background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+        .product2 img {
+            max-width: 100%;
+            border-radius: 30px;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product3 img {
+            max-width: 100%;
+            border-radius: 30px;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product4 img {
+            max-width: 100%;
+            border-radius: 30px;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product1 h2 {
             color: #fff;
+            margin-top: -10px;
+        }
+
+        .product2 h2 {
+            color: #fff;
+            margin-top: -10px;
+        }
+
+        .product3 h2 {
+            color: #fff;
+            margin-top: -10px;
+        }
+
+        .product4 h2 {
+            color: #fff;
+            margin-top: -10px;
+        }
+
+        .product1 button {
+            background-color: rgb(212, 98, 98);
+            border: 1px solid rgb(212, 98, 98);
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            width: 150px;
             height: 50px;
-            font-size: 25px;
+            margin-left: 75px;
+            transition: background-color 2s;
+            color:#fff;
+            font-size: medium;
         }
-        button {
-            border-radius: %;
+
+        .product1 button:hover {
+            background-color: #5f3164;
+        }
+
+        .product2 button {
+            background-color: rgb(212, 98, 98);
+            border: 1px solid rgb(212, 98, 98);
             text-align: center;
-            margin: 1em;
-            width: 120px;
-            height: 40px;
-            margin-left: 91px;
+            width: 150px;
+            height: 50px;
+            margin-left: 75px;
+            transition: background-color 2s;
+            color:#fff;
+            font-size: medium;
+
         }
-        a {
-            color: black;
+        .product2 button:hover {
+            background-color: #5f3164;
         }
+
+        .product3 button {
+            background-color: rgb(212, 98, 98);
+            border: 1px solid rgb(212, 98, 98);
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            margin-left: 75px;
+            transition: background-color 2s;
+            color:#fff;
+            font-size: medium;
+        }
+
+        .product3 button:hover {
+            background-color: #5f3164;
+        }
+
+        .product4 button {
+            background-color: rgb(212, 98, 98);
+            border: 1px solid rgb(212, 98, 98);
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            margin-left: 75px;
+            transition: background-color 2s;
+            color:#fff;
+            font-size: medium;
+
+        }
+        .product4 button:hover {
+            background-color: #5f3164;
+        }
+
     </style>
 </head>
 <body>
@@ -76,64 +197,42 @@
     </header>
 
     <section id="products">
+        <div class="product1">
+            <a href="https://www.instagram.com/p/C0q1wGjsgGb"><img src="New Hody.jpg"></a>
+        </div>
+        <div class="product2">
+            <a href="https://www.instagram.com/p/C0t3M2_MAKM"><img src="Hody-2.jpg"></img></a>
+        </div>
     </section>
-    <script>
-        const products = [
-            { id: 1, name: 'New Hody', price: 3000, image: 'New Hody.jpg' },
-            { id: 1, name: 'Dragon Ball Hody', price: 3000, image: 'The Second Hody.jpg' },
-        ];
+    <section id="informations">
+        <div class="product1">
+            <h2 align="center">3000 DZ</h2>
+            <a href="https://www.instagram.com/med_wassim_10/"><button onclick="contact-us">Contact Us</button></a>
+        </div>
+        <div class="product2">
+            <h2 align="center">3000 DZ</h2>
+            <a href="https://www.instagram.com/med_wassim_10/"><button onclick="contact-us">Contact Us</button></a>
+        </div>
+    </section>
 
-        const cart = [];
-
-        function renderProducts() {
-            const productsContainer = document.getElementById('products');
-            productsContainer.innerHTML = '';
-
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product';
-
-                productCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
-                    <h2>${product.name}</h2>
-                    <p>A hody by A&W.</p>
-                    <p>${product.price.toFixed(2)} DZ</p>
-                    <button onclick="ContactUs(${product.id})"><a href="https://www.instagram.com/med_wassim_10/">Contact Us</a></button>
-                `;
-
-                productsContainer.appendChild(productCard);
-            });
-        }
-
-        function renderCart() {
-            const cartContainer = document.getElementById('cart-items');
-            cartContainer.innerHTML = '';
-
-            cart.forEach(item => {
-                const cartItem = document.createElement('li');
-                cartItem.textContent = `${item.name} - ${item.price.toFixed(2)} USD`;
-                cartContainer.appendChild(cartItem);
-            });
-        }
-        function addToCart(productId) {
-            const productToAdd = products.find(product => product.id === productId);
-
-            if (productToAdd) {
-                cart.push({
-                    id: productToAdd.id,
-                    name: productToAdd.name,
-                    price: productToAdd.price,
-                });
-
-                renderCart();
-            }
-        }
-        renderProducts();
-        renderCart();
-    </script>
-
-    <footer>
-    <p>&copy; 2023 A&W. All rights reserved.</p>
-    </footer>
+    <section id="products">
+        <div class="product3">
+            <a href="https://www.instagram.com/p/C0t3M2_MAKM"><img src="Hody-4.jpg"></a>
+        </div>
+        <div class="product4">
+            <a href="https://www.instagram.com/p/C0t3FQnsgQK"><img src="Hody-3.jpg"></img></a>
+        </div>
+    </section>
+    <section id="informations">
+        <div class="product3">
+            <h2 align="center">3000 DZ</h2>
+            <a href="https://www.instagram.com/med_wassim_10/"><button onclick="contact-us">Contact Us</button></a>
+        </div>
+        <div class="product4">
+            <h2 align="center">3000 DZ</h2>
+            <a href="https://www.instagram.com/med_wassim_10/"><button onclick="contact-us">Contact Us</button></a>
+        </div>
+    </section>
+    </body>
 </body>
 </html>
